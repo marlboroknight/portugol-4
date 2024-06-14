@@ -1,0 +1,61 @@
+1.Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
+
+def cadastrar_estudantes():
+    estudantes = []
+
+    while True:
+        nome = input("Digite o nome do estudante (ou 'PARE' para finalizar): ")
+        if nome.upper() == "PARE":
+            break
+        estudantes.append(nome)
+
+    print(f"\nQuantidade de estudantes cadastrados: {len(estudantes)}")
+    print("Lista de estudantes:")
+    for estudante in estudantes:
+        print(estudante)
+
+# Executando o programa
+cadastrar_estudantes()
+
+///////////////////////////
+
+2.Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. 
+
+Verifique se o planeta que o usuário informou está na array e informe ao usuário.
+
+def verificar_planeta():
+    planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"]
+
+    planeta = input("Digite o nome de um planeta: ")
+
+    if planeta in planetas:
+        print(f"O planeta {planeta} está na lista.")
+    else:
+        print(f"O planeta {planeta} não está na lista.")
+
+# Executando o programa
+verificar_planeta()
+
+///////////////////////////////
+
+3. Vamos criar uma lista de compras. Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas. Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista". 
+Peça novamente para o usuário digitar o nome de uma fruta para ser removida. Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". 
+Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
+
+def lista_de_compras():
+    frutas = ["maçã", "banana", "laranja", "uva", "abacaxi"]
+
+    while frutas:
+        print(f"Frutas disponíveis: {', '.join(frutas)}")
+        fruta = input("Digite o nome de uma fruta para remover: ")
+
+        if fruta in frutas:
+            frutas.remove(fruta)
+            print("Fruta foi retirada da lista.")
+        else:
+            print("Fruta indisponível no nosso mercado.")
+    
+    print("Lista de compras finalizada.")
+
+# Executando o programa
+lista_de_compras()
